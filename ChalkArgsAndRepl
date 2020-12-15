@@ -1,0 +1,33 @@
+const express = require('express');
+const app = express();
+const chalk = require('chalk');
+
+
+
+
+const hostname = '127.0.0.1';
+const port = 4000;
+
+app.get('/', (req, res)=> {
+  res.send("<h1>cel</h1>")
+})
+
+const logger = require('./additionals');
+console.log('Test message imported from file is' + logger.log("mess"));
+
+
+app.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+process.argv.forEach((val, index) => {
+  console.log(`${index}: ${val}`)
+})
+
+console.log(chalk.cyan("color test"));
+
+process.on('SIGTERM', () => {
+  server.close(() => {
+    console.log('Process terminated')
+  })
+})
