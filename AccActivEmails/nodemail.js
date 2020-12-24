@@ -22,7 +22,7 @@ let transporter = nodemailer.createTransport({
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"Fred Foo ðŸ‘»" <service32mailing@gmail.com>', // sender address
+    from: '', // sender address
     to: address, // list of receivers
     subject: "test  âœ”", // Subject line
     text: "Å»artowaÅ‚em", // plain text body
