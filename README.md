@@ -7,13 +7,13 @@
  * Node LTS https://nodejs.org/en/ - Main Page!
 [Node](https://nodejs.org/en/)
 
- * Node LTS https://www.npmjs.com/package/chalk - chalk!
+ * Chalk Colors LTS https://www.npmjs.com/package/chalk - chalk!
 [Chalk link](https://www.npmjs.com/package/chalk/)
 
- * Node LTS https://nodejs.org/en/ - nodemail!
+ * Nodemailer LTS https://nodemailer.com/about/ - nodemail!
 [Nodemail](https://nodemailer.com/about/)
 
- * Node LTS https://nodejs.org/en/ - gmail cloud (SMTP!
+ * STMP Oauth Google Cloud https://nodejs.org/en/ - gmail cloud (SMTP!
 [Playground Link](https://developers.google.com/oauthplayground/)
 
 #### Mainly Mvc Node REST API
