@@ -1,3 +1,3 @@
-//empty for now
+//empty
 
 const alhpa = " empty";
