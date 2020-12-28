@@ -2,20 +2,19 @@
 
 
 ## Used libs and 3rd party tools
-..* Node LTS https://nodejs.org/en/ - automatic!
+
+
+..* Node LTS https://nodejs.org/en/ - Main Page!
 [Node](https://nodejs.org/en/)
 
-..* Node LTS https://nodejs.org/en/ - automatic!
-[Node](https://nodejs.org/en/)
-
-..* Node LTS https://nodejs.org/en/ - chalk!
-[Node](https://nodejs.org/en/)
+..* Node LTS https://www.npmjs.com/package/chalk - chalk!
+[Chalk link](https://www.npmjs.com/package/chalk/)
 
 ..* Node LTS https://nodejs.org/en/ - nodemail!
-[Node](https://nodejs.org/en/)
+[Nodemail](https://nodemailer.com/about/)
 
 ..* Node LTS https://nodejs.org/en/ - gmail cloud (SMTP!
-[Node](https://nodejs.org/en/)
+[Playground Link](https://developers.google.com/oauthplayground/)
 
 #### Mainly Mvc Node REST API
 
