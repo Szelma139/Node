@@ -6,6 +6,9 @@ const TableContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 600px;
+  max-width: 1200px;
+  width: auto;
 `;
 
 const StyledTr = styled.tr`
@@ -41,11 +44,11 @@ text-decoration:underline;
 `;
 
 const StyledTable = styled.table`
-  border-collapse: collapse;
+  border-collapse: collapse; 
   margin: 25px 0;
   font-size: 1.5em;
   font-family: sans-serif;
-  min-width: 800px;
+
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 
   thead tr {
@@ -55,12 +58,13 @@ const StyledTable = styled.table`
   }
   thead tr th:nth-child(0){
     border-top-left-radius: 12px;
-    padding:10px;
+    padding:12px;
 
   }
   thead tr th:last-child {
     border-top-right-radius: 12px;
-    padding:12px;  }
+    padding:12px;  
+    }
 
   ${StyledTr} {
     background-color: white;
@@ -83,8 +87,9 @@ export const Fetch = () => {
       });
     });
     // setContent(data)});
-  }, []);
+  }, [content]);
   return (
+    <>
     <TableContainer>
       <StyledTable>
         <thead>
@@ -110,6 +115,9 @@ export const Fetch = () => {
         </tbody>
       </StyledTable>
     </TableContainer>
+
+<StyledButton onClick={()=>fetchData()}>Refresh</StyledButton>
+</>
   );
 };
 
