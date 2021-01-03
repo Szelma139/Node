@@ -1,5 +1,7 @@
-/*/node_modules
-/*/nodemail
-/*/*/node_modules
+08\ -\ server/node_modules
+07\ -\ Tokens\ tokens\ tokens/queries.js
+07\ -\ Tokens\ tokens\ tokens/nodemail
+08\ -\ server/queries.js
+08\ -\ server/nodemail
+08\ -\ server/client/node_modules
 /node_modules
-/*/*/*/node_modules
