@@ -8,6 +8,8 @@ import { Fetch } from "./Fetch";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+//TODO: Add browser history dynamic routing
+
 const StyledUl = styled.ul`
   li {
     list-style-type: none;

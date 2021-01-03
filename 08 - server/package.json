@@ -11,7 +11,8 @@
     "express-generator": "^4.16.1",
     "nodemailer": "^6.4.17",
     "pg": "^8.5.1",
-    "pg-promise": "^10.8.6"
+    "pg-promise": "^10.8.6",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
