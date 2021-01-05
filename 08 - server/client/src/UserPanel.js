@@ -2,6 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
+import { Link } from 'react-router-dom';
+
 import { AiOutlineFileImage as AvatarImage } from "react-icons/ai";
 import { IoMdRemoveCircle as RemoveImage } from "react-icons/io";
 import {
@@ -99,7 +101,7 @@ img {
   width: 35%;
   position: absolute;
   top: 41%;
-  left: 30%;
+  left: 31%;
   border: 5px solid white;
 }
 `;
@@ -123,7 +125,13 @@ const ImageCenter = styled.div`
 
 const BottomContainer = styled.div`
 
+h2 {
+  margin-top: 10%;
+}
 
+a {
+  color: black;
+}
 
 p {
   color: green;
@@ -134,6 +142,12 @@ button {
   height: 60px;
   border: none;
   font-weight: 900px;
+
+  
+}
+
+button > * {
+  margin-left: 5px;
 }
 `;
 
@@ -143,7 +157,12 @@ align-items: center;
 justify-content: space-around;
 padding: 10px;
 font-size: 1.5rem;
+
+ > * {
+   flex-basis: 100%;
+ }
 `;
+
 
 
 const UserPanel = () => {
@@ -180,7 +199,10 @@ const UserPanel = () => {
           
           <h2>Ryan Adlard</h2>
           <p>Web Developer</p>
-<IconsContainer> <LinkedinIcon/><FacebookIcon/><TwitterIcon/></IconsContainer>
+          <IconsContainer> <a href="http://linkedin.com"><LinkedinIcon /></a>
+          <a href="http://facebook.com"><FacebookIcon /></a>
+            <a href="http://twitter.com"><TwitterIcon /></a>
+            </IconsContainer>
           <button>DOWNLOAD CV <DownloadIcon /></button>
           <button>CONTACT ME <ArrowRightIcon/></button>
         </BottomContainer>
