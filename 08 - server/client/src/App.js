@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { Home } from "./Home";
 import { Github } from "./Github";
 import { Fetch } from "./Fetch";
+import { Kite } from "./Kite";
+
 
 import { Router, Switch, Route, Link, useHistory } from "react-router-dom";
 import history from './history';
@@ -44,6 +46,7 @@ function App() {
                    component={Fetch}></Route>
             <Route exact path="/" component={Home}></Route>
             <Route exact path='/user/:name/:id' component={UserPanel}/>
+            <Route exact path='/kite' component={Kite} />
          
           </Switch>
         </div>
