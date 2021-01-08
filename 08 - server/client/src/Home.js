@@ -77,7 +77,7 @@ export const Home = () => {
         <Link to="/users">users</Link>
       </li>
       <li>
-        <Link to="/users">Users</Link>
+        <Link to="/kite">kite</Link>
       </li>
       <li>
         <Link to="/users">Users</Link>
