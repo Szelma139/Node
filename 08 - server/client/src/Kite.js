@@ -5,6 +5,7 @@ import { RightNav } from "./RightNav";
 import "./Kite.css";
 
 import { IoLogoJavascript as Logo } from "react-icons/io5";
+import { AiFillAlert, AiFillFileImage, AiFillFilePpt  } from 'react-icons/ai';
 
 const Navbar = styled.div`
   display: flex;
@@ -88,6 +89,41 @@ export const Kite = () => {
               will wake up, trying to swallow whole earth.{" "}
             </p>
           </div>
+        </div>
+      </div>
+
+
+
+
+      <div className="background-2">
+        <div className="grid-3">
+          <div>
+            <h1>Css mixins isn't a good idea!</h1>
+            <p>
+              While React gives huge diversity of options to choose from, amount
+              of css frameworks is still astounding. Finding a way for someone
+              beginning own journey in design world can be "interesting"
+              experience.
+            </p>
+          </div>
+          <div>
+            <h1>Css mixins isn't a good idea!</h1>
+            <p>
+              While React gives huge diversity of options to choose from, amount
+              of css frameworks is still astounding. Finding a way for someone
+              beginning own journey in design world can be "interesting"
+              experience.
+            </p>
+          </div>
+          <div>
+            <h1>Styled components compromises!!!</h1>
+            <p>
+              Styled components gives hope to those on the verge of joining dark
+              side. But at some point even they might mix css objects arrays
+              with css files together with styled components. 
+            </p>
+          </div>
+          
         </div>
       </div>
     </>

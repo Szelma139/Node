@@ -17,12 +17,36 @@ import history from './history';
 
 import {Router, Switch, Route, Link } from "react-router-dom";
 
+import {IoIosArrowDropleft as ArrowBackIcon} from 'react-icons/io';
+
 //TODO: Add browser history dynamic
 
 const StyledUl = styled.ul`
+    background-color: aliceblue;
+    padding: 0;
   li {
     list-style-type: none;
-    background-color: aliceblue;
+
+    a{
+      text-decoration: none;
+      padding: 20px;
+      font-size: 1.5rem;
+      display: block;
+      font-weight:400;
+      background-color: skyblue;
+      color: white;
+     
+    }
+
+    a:hover {
+      background-color: yellow;
+      color: black;
+      opacity: 0.8;
+    }
+
+    i > *{
+      padding: 0 20px 0 20px;
+=    }
   }
 `;
 
@@ -34,7 +58,7 @@ function App() {
           <nav>
             <StyledUl>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/"><i><ArrowBackIcon/></i><i><ArrowBackIcon/></i><i><ArrowBackIcon/></i>Home <i><ArrowBackIcon/></i> <i><ArrowBackIcon/></i> <i><ArrowBackIcon/></i></Link>
               </li>
      
             </StyledUl>

@@ -66,14 +66,25 @@ p{
 .background {
     background-color: #24273f;}
 
+    .background-2 {
+        padding: 2rem;;
+        background-color: #1347D6;
+    }
+
+
+   
 .grid-3 {
-    grid-template-columns: auto auto;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 50px;;
     display: grid;
     margin: auto;
 }
 
 
+.grid-3 > div {
+    padding: 1rem;
+}
 
 @media (max-width: 768px) {
 
@@ -82,6 +93,16 @@ p{
         margin-top: 50px;;
         display: grid;
         margin: auto; 
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr;
+        display: grid;
+        margin: auto; 
+    }
+
+    .grid-3 > h1{
+        text-align: left;
     }
   
 }
