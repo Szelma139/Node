@@ -1,6 +1,11 @@
 .App {
   text-align: center;
   font-family: 'Rosario', sans-serif;
+
+}
+
+li {
+  list-style-type: none;
 }
 
 .App-logo {
@@ -36,4 +41,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+body {
+  background: #aaffa9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #aaffa9, #11ffbd); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #aaffa9, #11ffbd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }

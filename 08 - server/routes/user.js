@@ -48,7 +48,7 @@ router.post("/registerUser", jsonParser, async (req, res) => {
 
 router.get("/selectUsers/id/:id", (request, response) => {
   const id = request.params.id;
-  pool.pool.query(
+  pool.query(
     "SELECT * from users WHERE id = $1",
     [id],
     (error, results) => {

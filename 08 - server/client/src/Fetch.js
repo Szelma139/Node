@@ -1,31 +1,27 @@
 import React from "react";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
-import { UserPanel } from "./UserPanel";
-
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import history from './history';
 
 const TableContainer = styled.div`
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 600px;
-  max-width: 1200px;
   width: auto;
 `;
 
 const StyledTr = styled.tr`
   background-color: #009879;
   color: #ffffff;
-  text-align: left;
+
+
 
   td,
   th {
-    padding: 12px 15px;
-    text-align: left;
-    margin-left: 1px solid #009811;
-    margin-right: 1px solid yellow;
+    padding: 12px 25px;
+    text-align: center;
+
+
   }
 `;
 
@@ -35,6 +31,7 @@ const StyledButton = styled.button`
   background-color: #6c7ae0;
   color: white;
   margin: auto;
+  font-size: 1.2rem;
 
   :hover {
     border-radius: 5px;
@@ -45,7 +42,6 @@ const StyledButton = styled.button`
 `;
 
 const StyledTable = styled.table`
-  border-collapse: collapse;
   margin: 25px 0;
   font-size: 1.5em;
   font-family: sans-serif;
@@ -78,25 +74,29 @@ const StyledTable = styled.table`
 `;
 
 export const Fetch = () => {
-  const history = useHistory();
 
   const [content, setContent] = React.useState([]);
+
   React.useEffect(() => {
     fetchData().then((response) => {
       response.json().then((json) => {
-        console.log(json);
+        //console.log(json);
         setContent(json);
       });
     });
     // setContent(data)});
   }, []);
   return (
+  
     <>
+
+
       <TableContainer>
         <StyledTable>
           <thead>
             <tr>
-              <th>Nr.</th>
+              <th>Index</th>
+              <th>System.ID</th>
               <th>Username</th>
               <th>E-mail</th>
               <th>Password</th>
@@ -107,23 +107,15 @@ export const Fetch = () => {
             {content.map((element, index) => (
               <StyledTr key={index}>
                 <td>{index}</td>
+                <td>{element.id}</td>
                 <td>{element.name}</td>
                 <td>{element.email}</td>
                 <td>{element.password}</td>
                 <td>
-
-                  <Route path={`/user/${element.name}${index}`}
-                  component={UserPanel}/>
-                {/* <Route
-                    exact path={`/user/${element.name}${index}`}
-                    render={(props) => {
-                      return <UserPanel name={element} {...props} />;
-                    }} */}
-                  {/* /> */}
-                  {console.log(`/user/${element.name}${index}`)}
+                  {/* {console.log(`/user/${element.name}/${element.id}`)} */}
                   <StyledButton
                     onClick={() =>
-                      history.push(`/user/${element.name}${index}`)
+                      history.push(`/user/${element.name}/${element.id}`)
                     }
                   >
                     Edytuj
@@ -137,6 +129,7 @@ export const Fetch = () => {
           </tbody>
         </StyledTable>
       </TableContainer>
+      
 
       <StyledButton onClick={() => fetchData()}>Refresh</StyledButton>
     </>
@@ -152,15 +145,3 @@ async function fetchData() {
   return data;
 }
 
-
-
-const DebugRouter = ({ children }: { children: any }) => {
-  const { location } = useHistory()
-  if (process.env.NODE_ENV === 'development') {
-    console.log(
-      `Route: ${location.pathname}${location.search}, State: ${JSON.stringify(location.state)}`,
-    )
-  }
-
-  return children
-}

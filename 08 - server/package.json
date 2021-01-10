@@ -12,6 +12,7 @@
     "nodemailer": "^6.4.17",
     "pg": "^8.5.1",
     "pg-promise": "^10.8.6",
+    "react-icons": "^4.1.0",
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {

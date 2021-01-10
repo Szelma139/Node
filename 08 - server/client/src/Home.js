@@ -71,13 +71,13 @@ export const Home = () => {
         <Link to="/fetch">fetch Test</Link>
       </li>
       <li>
-        <Link to="/users">users</Link>
+        <Link to="/showcase">showcase</Link>
       </li>
       <li>
-        <Link to="/users">users</Link>
+        <Link to="/pagination">pagination</Link>
       </li>
       <li>
-        <Link to="/users">Users</Link>
+        <Link to="/kite">kite</Link>
       </li>
       <li>
         <Link to="/users">Users</Link>
