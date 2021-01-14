@@ -7,6 +7,9 @@ const StyledToDoContainer = styled.div`
   margin-top: 50px;
 `;
 
+//zaimportowac akcje do tego pliku i wyslac dispatchem
+//dispatch(addToDo(todo)); //payloadem jest jeden element, konkretny obiekt dodawany - computed property
+
 export const ToDoList = () => {
   const [index, setIndex] = useState(0);
   const [todosList, setTodosList] = useState([]);
@@ -28,7 +31,7 @@ export const ToDoList = () => {
   //   setTodosList(newObject);
   // };
 
-  // const handleChange = (e) => {
+   const handleChange = (e) => {
   //   // todosList.map((element, index) => (
   //   // console.log(`${element.title} ${element.text} ${element.id}`))
   //   console.log(e.target.value);
@@ -36,10 +39,18 @@ export const ToDoList = () => {
 
   //   setProperties({ ...properties, [e.target.name]: currentProp });
   // };
+  const handleChange = (e) => {
+    
+     let currentProp = e.target.value;
+  
+    //   setProperties({ ...properties, [e.target.name]: currentProp });
+    // };
+
   const newTodos = useSelector((state) => state.todo);
   return (
     <div>
-      <button onClick={() => addToDo()}>Add To Do</button>
+      {/* <button onClick={() => addToDo()}>Add To Do</button> */}
+      <button onClick={() => dispatch({type:"ADD_TODO"})}>Add To Do</button>
       <input
         // onChange={(e) => handleChange(e)}
         placeholder="input title"
