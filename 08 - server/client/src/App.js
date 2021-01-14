@@ -9,6 +9,8 @@ import { Showcase } from "./Showcase";
 import { Pagination } from "./Pagination";
 import { Kite } from "./Kite";
 import { Footer } from "./Components/Footer/Footer";
+import { ToDoList } from "./Components/ToDoList";
+
 
 
 import  UserPanel from './UserPanel'
@@ -76,6 +78,7 @@ function App() {
             <Route exact path='/showcase' component={Showcase}/>
             <Route exact path='/pagination' component={Pagination}/>
             <Route exact path='/kite' component={Kite}/>
+            <Route exact path='/todo' component={ToDoList}/>
           </Switch>
         </div>
       </Router>

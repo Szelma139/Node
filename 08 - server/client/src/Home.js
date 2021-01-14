@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import AwesomeSlider from 'react-awesome-slider';
+
 
 const Container = styled.div`
   display: grid;
@@ -24,10 +26,12 @@ const Container = styled.div`
     justify-content: center;
     background-color: #525dba;
     padding: 0;
+    z-index: 1;
   
  
 
   }
+
 
   @keyframes anim {
     from {
@@ -61,6 +65,13 @@ const Container = styled.div`
 
 export const Home = () => {
   return (
+    <>
+
+<AwesomeSlider>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </AwesomeSlider>
     <Container>
       <li>
         <Link to="/users">users</Link>      </li>
@@ -77,6 +88,7 @@ export const Home = () => {
         <Link to="/pagination">pagination</Link>
       </li>
       <li>
+    
         <Link to="/kite">kite</Link>
       </li>
       <li>
@@ -86,10 +98,14 @@ export const Home = () => {
         <Link to="/users">Users</Link>
       </li>
 
+      <li>
+        <Link to="/todo">todo</Link>
+      </li>
       {/* 
               <li>
                 <Link to="/dupa">dupa</Link>
               </li> */}
     </Container>
+    </> 
   );
 };
