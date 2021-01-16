@@ -16,10 +16,11 @@ p {
 
 `;
 
-export const ToDo = ({id, title, text, handleDelete}) => {
+export const ToDo = ({id, title, text, deleteToDo}) => {
     return (
         <StyledToDo>
-            <button onClick={()=>handleDelete(id)}>Delete</button>
+            <button onClick={()=>deleteToDo(id)}>Delete</button>
+            id <h2>{id}</h2>
            title <h1>{title}</h1>
            text <p>{text}</p>
         </StyledToDo>

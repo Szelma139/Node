@@ -9,6 +9,14 @@ export const addTodo = (todo) => {
 
 export const getToDoList = ()=> {
     return {
-        type:"GET_TODO_LIST1"
+        type:"GET_TODO_LIST"
+    }
+}
+
+
+export const deleteToDo = (id) => {
+    return {
+        type:"DELETE_TODO",
+        payload: id
     }
 }
