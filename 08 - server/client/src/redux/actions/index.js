@@ -14,6 +14,14 @@ export const getToDoList = ()=> {
 }
 
 
+export const switchToDoState = (finished)=>{
+    return {
+        type:"SWITCH_TODO",
+        payload:finished
+    }
+}
+
+
 export const deleteToDo = (id) => {
     return {
         type:"DELETE_TODO",
