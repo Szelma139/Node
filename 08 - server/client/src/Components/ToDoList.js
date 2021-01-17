@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { ToDo } from "./ToDo";
 import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
 import { getToDoList, switchToDoState } from "../redux/actions";
-import { useSpring, animated } from "react-spring";
 
 const StyledToDoContainer = styled.div`
  margin: 0 auto;
@@ -57,26 +56,13 @@ export const ToDoList = () => {
     });
   };
 
-  const addToDo = () => {
-    dispatch({ type: "ADD_TODO", payload: properties });
-  };
-
-  const checkFinished = (id) => {
-    dispatch(switchToDoState(id));
-  };
-
-  const deleteToDo = (id) => {
-    dispatch({ type: "DELETE_TODO", payload: id });
-  };
-
   const newTodos = useSelector((state) => state.todo);
 
-  const props = useSpring({ x: 100, from: { x: 0 } });
 
   return (
     <div>
       <button onClick={() => dispatch(getToDoList())}>Dispatch</button>
-      <button onClick={() => addToDo()}>Add To Do</button>
+      <button onClick={() =>    dispatch({ type: "ADD_TODO", payload: properties })}>Add To Do</button>
       <input
         onChange={(e) => handleChange(e)}
         placeholder="input title"
@@ -97,8 +83,8 @@ export const ToDoList = () => {
                 id={element.id}
                 finished={element.finished}
                 color="black"
-                deleteToDo={deleteToDo}
-                checkFinished={checkFinished}
+                deleteToDo={()=>    dispatch({ type: "DELETE_TODO", payload: element.id })}
+                checkFinished={()=>   dispatch(switchToDoState(element.id))}
                 textColor="black"
 
               /> : null)
@@ -116,13 +102,14 @@ export const ToDoList = () => {
                 finished={element.finished}
                 color="white"
                 textColor="white"
-                deleteToDo={deleteToDo}
-                checkFinished={checkFinished}
+                deleteToDo={()=> dispatch({ type: "DELETE_TODO", payload: element.id })}
+                checkFinished={()=> dispatch(switchToDoState(element.id))}
               /> : null)
 
           )}
         </TabCompleted>
       </StyledToDoContainer>
+
     </div>
   );
 };
