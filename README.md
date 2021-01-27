@@ -16,6 +16,8 @@ Repository with slowly developing node app, backend rest api + mailing/sms/oauth
  * STMP Oauth Google Cloud https://nodejs.org/en/ - gmail cloud (SMTP!
 [Playground Link](https://developers.google.com/oauthplayground/)
 
+Nodemail links was deleted, because of personal gmail keys were added, and it can compromise my account.
+
 #### Mainly Mvc Node REST API
 
 
